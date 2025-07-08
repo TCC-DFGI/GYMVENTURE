@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcdcqwb12xjfv"]
+
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="1_fj8gi"]
+[ext_resource type="Script" path="res://scripts/carregando.gd" id="2_vswrc"]
+
+[node name="tela-de-carregamento" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = 1092.0
+offset_top = 950.0
+offset_right = 1751.0
+offset_bottom = 1021.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/shadow_outline_size = 19
+theme_override_fonts/font = ExtResource("1_fj8gi")
+theme_override_font_sizes/font_size = 70
+text = "CARREGANDO"
+script = ExtResource("2_vswrc")
+
+[node name="Timer" type="Timer" parent="Label"]
+wait_time = 0.5
+autostart = true
