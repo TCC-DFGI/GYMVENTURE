@@ -3,15 +3,15 @@
 [ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_4om1e"]
 [ext_resource type="Texture2D" uid="uid://cbm3djj3mh4ru" path="res://assets/logo.png" id="2_pq576"]
 
-[node name="tela-inicial" type="Node2D"]
+[node name="tela_inicial" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
 modulate = Color(0.41, 0.41, 0.41, 1)
-position = Vector2(1103.11, 620.5)
-scale = Vector2(2.15451, 2.15451)
+position = Vector2(704.889, 396.501)
+scale = Vector2(1.37673, 1.37673)
 texture = ExtResource("1_4om1e")
 
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(960, 302.125)
-scale = Vector2(11.0987, 11.0987)
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(640, 226)
+scale = Vector2(7.9704, 7.9704)
 texture = ExtResource("2_pq576")
