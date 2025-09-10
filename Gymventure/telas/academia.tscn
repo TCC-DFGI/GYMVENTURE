@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://c2hwtk3dmgvu2"]
+[gd_scene load_steps=57 format=4 uid="uid://c2hwtk3dmgvu2"]
 
 [ext_resource type="Texture2D" uid="uid://b3e6eggmd0r3i" path="res://assets/background/cenario/piso.png" id="1_66hn1"]
 [ext_resource type="Texture2D" uid="uid://d14uutkakek6n" path="res://assets/background/cenario/piso-borracha.png" id="2_hatyf"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://c7drysvdinqg4" path="res://equipamentos/banco_de_supino.tscn" id="25_ivocy"]
 [ext_resource type="Texture2D" uid="uid://bc72erau71dnm" path="res://assets/background/equipamentos/smith.png" id="25_v26yq"]
 [ext_resource type="PackedScene" uid="uid://bge0mgtqoyay" path="res://personagens/gian/gian.tscn" id="26_hatyf"]
+[ext_resource type="PackedScene" uid="uid://4bltpyrjx0so" path="res://equipamentos/polia_dupla.tscn" id="26_ru85g"]
+[ext_resource type="Script" uid="uid://boerln6poqoef" path="res://equipamentos/equipamento_ysort.gd" id="27_che0y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73men"]
 texture = ExtResource("1_66hn1")
@@ -320,3 +322,7 @@ position = Vector2(184, 112)
 
 [node name="gian" parent="Ysort" instance=ExtResource("26_hatyf")]
 position = Vector2(186, 142)
+
+[node name="polia-dupla" parent="Ysort" instance=ExtResource("26_ru85g")]
+position = Vector2(408, 88)
+script = ExtResource("27_che0y")
