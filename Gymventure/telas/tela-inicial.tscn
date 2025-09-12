@@ -1,7 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnyjmj8tapk1n"]
+[gd_scene load_steps=9 format=3 uid="uid://cnyjmj8tapk1n"]
 
 [ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_4om1e"]
 [ext_resource type="Texture2D" uid="uid://cbm3djj3mh4ru" path="res://assets/logo.png" id="2_pq576"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="3_cgsmg"]
+[ext_resource type="Script" uid="uid://cbf17r36ck301" path="res://telas/botao_cadastro.gd" id="3_y7p6k"]
+[ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="4_o45mv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y7p6k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o45mv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70njb"]
 
 [node name="tela_inicial" type="Node2D"]
 
@@ -15,3 +24,31 @@ texture = ExtResource("1_4om1e")
 position = Vector2(640, 226)
 scale = Vector2(7.9704, 7.9704)
 texture = ExtResource("2_pq576")
+
+[node name="botao_cadastro" type="Button" parent="."]
+offset_left = 114.0
+offset_top = 446.0
+offset_right = 467.0
+offset_bottom = 560.0
+theme_type_variation = &"FlatButton"
+script = ExtResource("3_y7p6k")
+
+[node name="Button_Background" type="Sprite2D" parent="botao_cadastro"]
+position = Vector2(176.5, 58.5)
+scale = Vector2(2.67969, 3.53572)
+texture = ExtResource("4_o45mv")
+
+[node name="Button" type="Button" parent="botao_cadastro"]
+offset_left = 18.0
+offset_top = 15.0
+offset_right = 342.0
+offset_bottom = 95.0
+theme_type_variation = &"FlatButton"
+theme_override_fonts/font = ExtResource("3_cgsmg")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_y7p6k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_o45mv")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_70njb")
+text = "CADASTRO"
+
+[connection signal="pressed" from="botao_cadastro/Button" to="botao_cadastro" method="_on_button_pressed"]
