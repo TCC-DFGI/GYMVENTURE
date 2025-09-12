@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvia52tprqgtp"]
+
+[ext_resource type="Script" uid="uid://boerln6poqoef" path="res://equipamentos/equipamento_ysort.gd" id="1_rk3ou"]
+[ext_resource type="Texture2D" uid="uid://dxt11r8c6aagj" path="res://assets/background/equipamentos/leg-press-45.png" id="2_awobf"]
+
+[node name="leg_press" type="Node2D"]
+script = ExtResource("1_rk3ou")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("2_awobf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2(10, -9.09495e-13)
+scale = Vector2(0.902778, 2.82813)
+polygon = PackedVector2Array(-20, -10, -2, -10, -2, 0, -20, 0)

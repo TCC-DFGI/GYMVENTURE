@@ -20,6 +20,7 @@ texture = ExtResource("1_8dim2")
 
 [node name="estrela" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(0, -6)
 texture = ExtResource("2_ao2h2")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

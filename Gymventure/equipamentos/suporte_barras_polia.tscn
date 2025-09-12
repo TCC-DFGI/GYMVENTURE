@@ -19,7 +19,7 @@ texture = ExtResource("1_5lyxe")
 
 [node name="exclamacao" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(0, -35)
+position = Vector2(0, -25)
 texture = ExtResource("2_1vau7")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

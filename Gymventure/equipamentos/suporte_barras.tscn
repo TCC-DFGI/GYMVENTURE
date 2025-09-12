@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nkqwnct02b4x" path="res://assets/ui/efeitos/exclamação.png" id="2_j5sqh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgx5e"]
-size = Vector2(27.5, 21.75)
+size = Vector2(27.5, 27.875)
 
 [node name="suporte_barras" type="Node2D"]
 
