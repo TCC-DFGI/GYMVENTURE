@@ -10,3 +10,7 @@ func _ready():
 func _on_timer_timeout():
 	ponto = (ponto + 1) % 4  # Vai de 0 a 3 e reinicia
 	text = "CARREGANDO" + ".".repeat(ponto)
+
+
+func _on_timerfake_timeout():
+	get_tree().change_scene_to_file("res://telas/academia.tscn")
