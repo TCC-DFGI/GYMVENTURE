@@ -5,6 +5,11 @@
 
 [node name="tela_de_carregamento" type="Node2D"]
 
+[node name="timerfake" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -111.0
 offset_top = -85.0
@@ -30,3 +35,5 @@ script = ExtResource("2_vswrc")
 [node name="Timer" type="Timer" parent="Label"]
 wait_time = 0.5
 autostart = true
+
+[connection signal="timeout" from="timerfake" to="Label" method="_on_timerfake_timeout"]
