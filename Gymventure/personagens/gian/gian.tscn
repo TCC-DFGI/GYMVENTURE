@@ -1,10 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://bge0mgtqoyay"]
 
-[ext_resource type="Script" uid="uid://70yu70tmm6we" path="res://personagens/gian/gian.gd" id="1_4aeaa"]
+[ext_resource type="Script" uid="uid://70yu70tmm6we" path="res://scripts/personagens/gian.gd" id="1_4aeaa"]
 [ext_resource type="Texture2D" uid="uid://bmutgj4hdhmos" path="res://assets/characters/gian/gian-movimentacao.png" id="2_4aeaa"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aeaa"]
-size = Vector2(4, 14)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r8k24"]
+radius = 2.0
+height = 12.0
 
 [sub_resource type="Animation" id="Animation_tqh6e"]
 length = 0.001
@@ -150,7 +151,7 @@ frame = 5
 [node name="colisao" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
 rotation = 1.5708
-shape = SubResource("RectangleShape2D_4aeaa")
+shape = SubResource("CapsuleShape2D_r8k24")
 
 [node name="animacao" type="AnimationPlayer" parent="."]
 libraries = {
