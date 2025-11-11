@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbrx1r3assnkh"]
+
+[ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_7ccsl"]
+[ext_resource type="Script" uid="uid://cole4fpgtb61l" path="res://scripts/telas/skins.gd" id="1_75q40"]
+[ext_resource type="Texture2D" uid="uid://wgimsobmtd4l" path="res://assets/ui/botoes/skins.png" id="2_5y3e6"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="3_5y3e6"]
+
+[node name="Skins" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_75q40")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.371622, 0.371622, 0.371622, 1)
+layout_mode = 0
+offset_right = 1404.0
+offset_bottom = 805.0
+texture = ExtResource("1_7ccsl")
+
+[node name="Skins" type="Sprite2D" parent="."]
+position = Vector2(640, 425)
+scale = Vector2(2.16415, 2.16415)
+texture = ExtResource("2_5y3e6")
+
+[node name="StatusLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 59.0
+offset_right = 1021.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_5y3e6")
+theme_override_font_sizes/font_size = 40
+text = "Selecione seu personagem"
+horizontal_alignment = 1
+
+[node name="DemianBtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 164.0
+offset_top = 175.0
+offset_right = 398.0
+offset_bottom = 679.0
+
+[node name="FelipeBtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 402.0
+offset_top = 175.0
+offset_right = 636.0
+offset_bottom = 679.0
+
+[node name="GianBtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 640.0
+offset_top = 175.0
+offset_right = 874.0
+offset_bottom = 679.0
+
+[node name="IsabellaBtn" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 878.0
+offset_top = 175.0
+offset_right = 1112.0
+offset_bottom = 679.0

@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://wyml1f7k26fv"]
+
+[ext_resource type="Script" uid="uid://b4ta5ult4qm70" path="res://scripts/telas/pause.gd" id="1_bi8kj"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="1_gtwrp"]
+[ext_resource type="Texture2D" uid="uid://c0yrkkx0me73g" path="res://assets/ui/botoes/botao_voltar.png" id="2_bi8kj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5h7t"]
+bg_color = Color(0.446777, 0.446777, 0.446777, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bi8kj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5h7t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o04lr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6p6e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gtvgq"]
+texture = ExtResource("2_bi8kj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3tcn"]
+texture = ExtResource("2_bi8kj")
+
+[node name="Pause" type="CanvasLayer"]
+script = ExtResource("1_bi8kj")
+metadata/_edit_horizontal_guides_ = [-178.0]
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 191.0
+offset_top = 109.0
+offset_right = 1094.0
+offset_bottom = 658.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_x5h7t")
+
+[node name="MusicaBtn" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 283.0
+offset_top = 409.0
+offset_right = 433.0
+offset_bottom = 559.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bi8kj")
+
+[node name="SomBtn" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 572.0
+offset_top = 409.0
+offset_right = 722.0
+offset_bottom = 559.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x5h7t")
+
+[node name="SairBtn" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 150)
+offset_left = 863.0
+offset_top = 409.0
+offset_right = 1013.0
+offset_bottom = 559.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o04lr")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 251.0
+offset_top = 176.0
+offset_right = 1033.0
+offset_bottom = 237.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("1_gtwrp")
+theme_override_font_sizes/font_size = 60
+text = "PAUSE"
+horizontal_alignment = 1
+
+[node name="VoltarBtn" type="Button" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(30, 30)
+offset_left = 1121.0
+offset_top = 54.0
+offset_right = 1226.0
+offset_bottom = 159.0
+theme_override_fonts/font = ExtResource("1_gtwrp")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l6p6e")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gtvgq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_gtvgq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_x3tcn")

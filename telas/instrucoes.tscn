@@ -1,0 +1,65 @@
+[gd_scene load_steps=4 format=3 uid="uid://c41m8tsyot80w"]
+
+[ext_resource type="Script" uid="uid://cwgdsaij5ivgo" path="res://scripts/telas/instrucoes.gd" id="1_pvyy0"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="2_pvyy0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l0rr"]
+bg_color = Color(0.446777, 0.446777, 0.446777, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+
+[node name="Instruções" type="CanvasLayer"]
+script = ExtResource("1_pvyy0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 191.0
+offset_top = 109.0
+offset_right = 1094.0
+offset_bottom = 658.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2l0rr")
+
+[node name="FundoBotão" type="Sprite2D" parent="."]
+position = Vector2(641, 216)
+scale = Vector2(3.28571, 3.28571)
+
+[node name="Botão" type="Label" parent="."]
+offset_left = 523.0
+offset_top = 188.0
+offset_right = 772.0
+offset_bottom = 234.0
+theme_override_fonts/font = ExtResource("2_pvyy0")
+theme_override_font_sizes/font_size = 45
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="."]
+offset_left = 397.0
+offset_top = 272.0
+offset_right = 881.0
+offset_bottom = 524.0
+theme_override_constants/line_spacing = 7
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_pvyy0")
+theme_override_font_sizes/font_size = 39
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Pressione" type="Label" parent="."]
+offset_left = 329.0
+offset_top = 550.0
+offset_right = 961.0
+offset_bottom = 649.0
+theme_override_colors/font_color = Color(1, 0.245241, 0.187845, 1)
+theme_override_constants/line_spacing = 7
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("2_pvyy0")
+theme_override_font_sizes/font_size = 29
+text = "Pressione ENTER pra iniciar"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

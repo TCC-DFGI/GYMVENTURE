@@ -1,0 +1,85 @@
+[gd_scene load_steps=9 format=3 uid="uid://di0ms0aqfptla"]
+
+[ext_resource type="Script" uid="uid://c2hxis3di36ru" path="res://scripts/telas/minigames/minigame_triceps.gd" id="1_m6euq"]
+[ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="2_wrvsd"]
+[ext_resource type="Texture2D" uid="uid://k66i01g2afps" path="res://assets/background/minigames/triceps.png" id="3_m6euq"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="4_pined"]
+[ext_resource type="Texture2D" uid="uid://dgmwxs6p2tif0" path="res://assets/characters/gian/gian-triceps.png" id="5_wrvsd"]
+[ext_resource type="PackedScene" uid="uid://wyml1f7k26fv" path="res://telas/pause.tscn" id="6_wrvsd"]
+[ext_resource type="PackedScene" uid="uid://c41m8tsyot80w" path="res://telas/instrucoes.tscn" id="7_dky1i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6euq"]
+bg_color = Color(0.270222, 0.270222, 0.270222, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="minigame_triceps" type="Node2D"]
+script = ExtResource("1_m6euq")
+academia = "res://telas/fase_1.tscn"
+total_reps = 1
+
+[node name="tela_carregamento" parent="." instance=ExtResource("2_wrvsd")]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -338.0
+offset_top = -109.0
+offset_right = 1304.0
+offset_bottom = 815.0
+texture = ExtResource("3_m6euq")
+metadata/_edit_use_anchors_ = true
+
+[node name="RepLabel" type="Label" parent="."]
+z_index = 4
+offset_left = 63.0
+offset_top = 58.0
+offset_right = 474.0
+offset_bottom = 150.0
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_pined")
+theme_override_font_sizes/font_size = 91
+text = "REPS"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 955.0
+offset_top = 59.0
+offset_right = 1177.0
+offset_bottom = 701.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m6euq")
+metadata/_edit_use_anchors_ = true
+
+[node name="SequenceLabel" type="Label" parent="."]
+z_index = 4
+offset_left = 1036.0
+offset_top = 128.0
+offset_right = 1115.0
+offset_bottom = 514.0
+theme_override_constants/line_spacing = 15
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_pined")
+theme_override_font_sizes/font_size = 91
+text = "ABC"
+autowrap_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="gian" type="Sprite2D" parent="."]
+position = Vector2(503.778, 366)
+scale = Vector2(15.8413, 15.8413)
+texture = ExtResource("5_wrvsd")
+hframes = 4
+
+[node name="TimeoutTimer" type="Timer" parent="."]
+
+[node name="Pause" parent="." instance=ExtResource("6_wrvsd")]
+destino = "res://telas/fase_1.tscn"
+
+[node name="Instruções" parent="." instance=ExtResource("7_dky1i")]
+texto_instrucao = "Aperte as letras na ordem"
