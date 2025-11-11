@@ -1,0 +1,121 @@
+[gd_scene load_steps=17 format=3 uid="uid://q32i7y5bc6ta"]
+
+[ext_resource type="Script" uid="uid://b8milbwibw3nc" path="res://scripts/telas/menu.gd" id="1_64dqw"]
+[ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_yoxkw"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="2_64dqw"]
+[ext_resource type="Texture2D" uid="uid://cbm3djj3mh4ru" path="res://assets/logo.png" id="3_4u6ot"]
+[ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="4_bhv1q"]
+[ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="5_4u6ot"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4u6ot"]
+texture = ExtResource("1_yoxkw")
+modulate_color = Color(0.462291, 0.462291, 0.462291, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bhv1q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dbxib"]
+texture = ExtResource("4_bhv1q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j6jlu"]
+texture = ExtResource("4_bhv1q")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dbxib"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7wk7a"]
+texture = ExtResource("4_bhv1q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_alpjs"]
+texture = ExtResource("4_bhv1q")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j6jlu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hnp31"]
+texture = ExtResource("4_bhv1q")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5lbg3"]
+texture = ExtResource("4_bhv1q")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64dqw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_4u6ot")
+
+[node name="SairBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 550.0
+offset_right = 412.0
+offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("2_64dqw")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bhv1q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dbxib")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dbxib")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j6jlu")
+text = "SAIR
+"
+
+[node name="IniciarBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 550.0
+offset_right = 823.0
+offset_bottom = 630.0
+theme_override_fonts/font = ExtResource("2_64dqw")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dbxib")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7wk7a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7wk7a")
+theme_override_styles/normal = SubResource("StyleBoxTexture_alpjs")
+text = "INICIAR
+"
+
+[node name="ConfigBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 879.0
+offset_top = 552.0
+offset_right = 1234.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("2_64dqw")
+theme_override_font_sizes/font_size = 29
+theme_override_styles/focus = SubResource("StyleBoxEmpty_j6jlu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_hnp31")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hnp31")
+theme_override_styles/normal = SubResource("StyleBoxTexture_5lbg3")
+text = "CONFIGURACOES
+"
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(640, 267)
+scale = Vector2(7.9704, 7.9704)
+texture = ExtResource("3_4u6ot")
+
+[node name="tela_carregamento" parent="." instance=ExtResource("5_4u6ot")]
+visible = false
+
+[node name="StatusLabel" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(30, 80)
+layout_mode = 0
+offset_left = 385.0
+offset_top = 447.0
+offset_right = 939.0
+offset_bottom = 527.0
+theme_override_colors/font_color = Color(0.764495, 0.0543083, 0.0876316, 1)
+theme_override_fonts/font = ExtResource("2_64dqw")
+theme_override_font_sizes/font_size = 70
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwjlvtpyekw0d"]
+
+[ext_resource type="Script" uid="uid://dq68dy0rgihfj" path="res://scripts/telas/minigames/minigame_pulley.gd" id="1_2gy0f"]
+[ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="2_qyfkg"]
+[ext_resource type="Texture2D" uid="uid://dqbxnmvynpfby" path="res://assets/background/minigames/pulley.png" id="3_augkp"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="4_soyp4"]
+[ext_resource type="Texture2D" uid="uid://gasy1pr8bt2u" path="res://assets/characters/gian/gian-pulley.png" id="5_vacik"]
+[ext_resource type="Texture2D" uid="uid://cvmepai0qb76c" path="res://assets/ui/efeitos/estrela.png" id="6_wyyvi"]
+[ext_resource type="PackedScene" uid="uid://wyml1f7k26fv" path="res://telas/pause.tscn" id="7_qyfkg"]
+[ext_resource type="PackedScene" uid="uid://c41m8tsyot80w" path="res://telas/instrucoes.tscn" id="8_augkp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivemd"]
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5wq3"]
+bg_color = Color(0.182276, 0.173761, 0.213124, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="minigame_pulley" type="Node2D"]
+script = ExtResource("1_2gy0f")
+academia = "res://telas/fase_3.tscn"
+total_reps = 12
+velocidade_base = 400.0
+
+[node name="tela_carregamento" parent="." instance=ExtResource("2_qyfkg")]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -193.0
+offset_top = -106.0
+offset_right = 1449.0
+offset_bottom = 818.0
+texture = ExtResource("3_augkp")
+metadata/_edit_use_anchors_ = true
+
+[node name="RepLabel" type="Label" parent="."]
+z_index = 4
+offset_left = 63.0
+offset_top = 58.0
+offset_right = 474.0
+offset_bottom = 150.0
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_soyp4")
+theme_override_font_sizes/font_size = 91
+text = "REPS"
+metadata/_edit_use_anchors_ = true
+
+[node name="gian" type="Sprite2D" parent="."]
+position = Vector2(629, 338)
+scale = Vector2(15.8413, 15.8413)
+texture = ExtResource("5_vacik")
+hframes = 5
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+z_index = 1
+offset_left = 245.0
+offset_top = 625.0
+offset_right = 1026.0
+offset_bottom = 739.0
+theme_override_styles/background = SubResource("StyleBoxFlat_ivemd")
+theme_override_styles/fill = SubResource("StyleBoxFlat_x5wq3")
+show_percentage = false
+
+[node name="Alvo" type="ColorRect" parent="ProgressBar"]
+z_index = 1
+layout_mode = 0
+offset_left = 261.0
+offset_top = 10.0
+offset_right = 318.0
+offset_bottom = 104.0
+color = Color(0.93528, 0.0666136, 0.175032, 1)
+
+[node name="Pointer" type="TextureRect" parent="ProgressBar"]
+z_index = 2
+layout_mode = 0
+offset_left = 10.0
+offset_top = -16.0
+offset_right = 118.0
+offset_bottom = 92.0
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("6_wyyvi")
+
+[node name="Pause" parent="." instance=ExtResource("7_qyfkg")]
+destino = "res://telas/fase_3.tscn"
+
+[node name="Instruções" parent="." instance=ExtResource("8_augkp")]
+imagem_path = "res://assets/ui/botoes/button.png"
+texto_instrucao = "Pressione ESPACO quanndo a estrela estiver no alvo"
+tecla = "ESPACO"

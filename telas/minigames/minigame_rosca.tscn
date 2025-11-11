@@ -1,0 +1,132 @@
+[gd_scene load_steps=12 format=3 uid="uid://chkd5nrhmwc0k"]
+
+[ext_resource type="Script" uid="uid://bm77p344ww53a" path="res://scripts/telas/minigames/minigame_rosca.gd" id="1_e3bju"]
+[ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="1_emon5"]
+[ext_resource type="Texture2D" uid="uid://dxerkfplxwwdn" path="res://assets/background/minigames/rosca.png" id="2_e3bju"]
+[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="3_x3j1t"]
+[ext_resource type="Texture2D" uid="uid://cm5qpj56td731" path="res://assets/characters/gian/gian-rosca.png" id="4_i43ht"]
+[ext_resource type="Texture2D" uid="uid://cvmepai0qb76c" path="res://assets/ui/efeitos/estrela.png" id="5_plmwj"]
+[ext_resource type="PackedScene" uid="uid://wyml1f7k26fv" path="res://telas/pause.tscn" id="7_x3j1t"]
+[ext_resource type="PackedScene" uid="uid://c41m8tsyot80w" path="res://telas/instrucoes.tscn" id="8_i43ht"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3j1t"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i43ht"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e3bju"]
+bg_color = Color(0.933333, 0.0666667, 0.176471, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="minigame_rosca" type="Node2D"]
+script = ExtResource("1_e3bju")
+academia = "res://telas/fase_3.tscn"
+
+[node name="tela_carregamento" parent="." instance=ExtResource("1_emon5")]
+visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -155.0
+offset_top = -81.0
+offset_right = 1487.0
+offset_bottom = 843.0
+texture = ExtResource("2_e3bju")
+metadata/_edit_use_anchors_ = true
+
+[node name="RepLabel" type="Label" parent="."]
+z_index = 4
+offset_left = 63.0
+offset_top = 58.0
+offset_right = 474.0
+offset_bottom = 150.0
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("3_x3j1t")
+theme_override_font_sizes/font_size = 91
+text = "REPS"
+metadata/_edit_use_anchors_ = true
+
+[node name="gian" type="Sprite2D" parent="."]
+position = Vector2(849, 394)
+scale = Vector2(15.8413, 15.8413)
+texture = ExtResource("4_i43ht")
+hframes = 5
+
+[node name="Circulo" type="Node2D" parent="."]
+position = Vector2(292, 394)
+scale = Vector2(1.885, 1.885)
+
+[node name="Panel2" type="Panel" parent="Circulo"]
+offset_left = -75.1989
+offset_top = -73.7294
+offset_right = 124.801
+offset_bottom = 126.271
+scale = Vector2(1.05, 1.05)
+pivot_offset = Vector2(100, 100)
+theme_override_styles/panel = SubResource("StyleBoxFlat_x3j1t")
+
+[node name="Panel" type="Panel" parent="Circulo"]
+offset_left = -75.0
+offset_top = -74.0
+offset_right = 125.0
+offset_bottom = 126.0
+pivot_offset = Vector2(100, 100)
+theme_override_styles/panel = SubResource("StyleBoxFlat_i43ht")
+
+[node name="Alvo1" type="Panel" parent="Circulo"]
+offset_right = 50.0
+offset_bottom = 50.0
+pivot_offset = Vector2(25, 25)
+theme_override_styles/panel = SubResource("StyleBoxFlat_e3bju")
+
+[node name="Alvo2" type="Panel" parent="Circulo"]
+offset_right = 50.0
+offset_bottom = 50.0
+pivot_offset = Vector2(25, 25)
+theme_override_styles/panel = SubResource("StyleBoxFlat_e3bju")
+
+[node name="Alvo3" type="Panel" parent="Circulo"]
+offset_right = 50.0
+offset_bottom = 50.0
+pivot_offset = Vector2(25, 25)
+theme_override_styles/panel = SubResource("StyleBoxFlat_e3bju")
+
+[node name="Pointer" type="TextureRect" parent="Circulo"]
+offset_right = 50.0
+offset_bottom = 50.0
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("5_plmwj")
+
+[node name="Pause" parent="." instance=ExtResource("7_x3j1t")]
+destino = "res://telas/fase_3.tscn"
+
+[node name="Instruções" parent="." instance=ExtResource("8_i43ht")]
+imagem_path = "res://assets/ui/botoes/button.png"
+texto_instrucao = "Pressione ESPACO acertando os 3 alvos em sequencia"
+tecla = "ESPACO"
