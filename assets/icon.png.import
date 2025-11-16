@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bae2noanf064x"
-path="res://.godot/imported/pulley.png-2d14d30e506a1294300ed51d0e4a5531.ctex"
+uid="uid://dpw5gcdto1nuq"
+path="res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/grupos-musculares/pulley.png"
-dest_files=["res://.godot/imported/pulley.png-2d14d30e506a1294300ed51d0e4a5531.ctex"]
+source_file="res://assets/icon.png"
+dest_files=["res://.godot/imported/icon.png-b6a7fb2db36edd3d95dc42f1dc8c1c5d.ctex"]
 
 [params]
 
