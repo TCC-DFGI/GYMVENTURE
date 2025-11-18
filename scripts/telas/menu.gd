@@ -4,6 +4,7 @@ extends Control
 @onready var config_btn := $ConfigBtn
 @onready var sair_btn := $SairBtn
 @onready var status_label := $StatusLabel
+@onready var op :=$Pause
 
 func _ready():
 	iniciar_btn.pressed.connect(_on_iniciar_pressed)
@@ -96,7 +97,7 @@ func criar_progresso_inicial(user_id: String) -> void:
 
 # --- Botão CONFIGURAÇÕES ---
 func _on_config_pressed() -> void:
-	get_tree().change_scene_to_file("res://telas/config.tscn")
+	op.visible = true
 
 # --- Botão SAIR ---
 func _on_sair_pressed() -> void:

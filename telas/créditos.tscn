@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://djol32pvg6tix"]
+
+[ext_resource type="Script" uid="uid://duw7ruoqokucf" path="res://scripts/telas/créditos.gd" id="1_jj6m6"]
+[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="2_dsmll"]
+
+[node name="Créditos" type="Node2D"]
+script = ExtResource("1_jj6m6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -766.0
+offset_top = -445.0
+offset_right = 1974.0
+offset_bottom = 1261.0
+color = Color(0, 0, 0, 1)
+
+[node name="Texto" type="RichTextLabel" parent="."]
+offset_left = -642.0
+offset_top = -374.0
+offset_right = 634.0
+offset_bottom = 396.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("2_dsmll")
+theme_override_font_sizes/normal_font_size = 32
+text = "Parabéns, você completou o treino"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]

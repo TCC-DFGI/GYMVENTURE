@@ -17,31 +17,39 @@ func iniciar_dialogo(tipo: int):
 	match tipo:
 		1:
 			falas = [
-				"Muito prazer, meu nome é Marcio, seu treinador",
+				"Muito prazer, meu nome é Marcio, seu treinador (APERTE ESPAÇO PARA PROSSEGUIR)",
 				"Aqui está a ficha de treino que montei para você",
-				"Vamos lá!"
+				"Para interagir, pressione (E) ao aparecer uma EXCLAMAÇÃO (!)",
+				"E para abrir as opções, aperte ESC",
+				"Vamos lá pro seu primeiro treino"
 			]
-			frames = [0, 1, 0]  # frames do Treinador correspondentes
+			frames = [0, 1, 2, 0, 1]  # frames do Treinador correspondentes
 		2:
 			falas = [
 				"Seja bem-vindo de novo!",
 				"O treino de hoje é de membros inferiores.",
 				"Vai com tudo!"
 			]
-			frames = [0, 0, 1]
+			frames = [2, 0, 1]
 		3:
 			falas = [
 				"Bem vindo de novo campeão!",
 				"Para o último treino da semana, vamos trabalhar o dorsal e bíceps",
 				"Me avisa se tiver dúvida"
 			]
-			frames = [0, 1, 0]
+			frames = [2, 1, 0]
 		4:
 			falas = [
 				"Opa, que bom que voltou!",
 				"Pode continuar de onde parou."
 			]
-			frames = [0, 0]
+			frames = [3, 0]
+		5:
+			falas = [
+				"Parabéns, você concluiu seu treino",
+				"Até semana que vem!!!"
+			]
+			frames = [2, 0]
 	
 	texto_atual = 0
 	visible = true

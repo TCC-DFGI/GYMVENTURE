@@ -1,8 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://wyml1f7k26fv"]
+[gd_scene load_steps=25 format=3 uid="uid://wyml1f7k26fv"]
 
 [ext_resource type="Script" uid="uid://b4ta5ult4qm70" path="res://scripts/telas/pause.gd" id="1_bi8kj"]
 [ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="1_gtwrp"]
 [ext_resource type="Texture2D" uid="uid://c0yrkkx0me73g" path="res://assets/ui/botoes/botao_voltar.png" id="2_bi8kj"]
+[ext_resource type="Texture2D" uid="uid://g74r2803kaqv" path="res://assets/ui/botoes/botao_ind.png" id="2_l6p6e"]
+[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="2_x5h7t"]
+[ext_resource type="Texture2D" uid="uid://bpivgwohxxhk4" path="res://assets/ui/botoes/sair.png" id="5_o04lr"]
+[ext_resource type="Texture2D" uid="uid://dpun0u4xqeiud" path="res://assets/ui/botoes/audio.png" id="7_0ksy2"]
+[ext_resource type="Texture2D" uid="uid://vdcclvjlb8x4" path="res://assets/ui/botoes/musica.png" id="8_ryga1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5h7t"]
 bg_color = Color(0.446777, 0.446777, 0.446777, 1)
@@ -14,9 +19,36 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bi8kj"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_un83m"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d673s"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1od4j"]
+texture = ExtResource("2_l6p6e")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x5h7t"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0pv2k"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kagei"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u2qba"]
+texture = ExtResource("2_l6p6e")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o04lr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipd8b"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1g08u"]
+texture = ExtResource("2_l6p6e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_886yh"]
+texture = ExtResource("2_l6p6e")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l6p6e"]
 
@@ -44,6 +76,9 @@ offset_top = 409.0
 offset_right = 433.0
 offset_bottom = 559.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bi8kj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_un83m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_d673s")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1od4j")
 
 [node name="SomBtn" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 150)
@@ -52,6 +87,9 @@ offset_top = 409.0
 offset_right = 722.0
 offset_bottom = 559.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x5h7t")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0pv2k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kagei")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u2qba")
 
 [node name="SairBtn" type="Button" parent="."]
 custom_minimum_size = Vector2(150, 150)
@@ -60,6 +98,9 @@ offset_top = 409.0
 offset_right = 1013.0
 offset_bottom = 559.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o04lr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ipd8b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1g08u")
+theme_override_styles/normal = SubResource("StyleBoxTexture_886yh")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 251.0
@@ -68,9 +109,9 @@ offset_right = 1033.0
 offset_bottom = 237.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 41
-theme_override_fonts/font = ExtResource("1_gtwrp")
+theme_override_fonts/font = ExtResource("2_x5h7t")
 theme_override_font_sizes/font_size = 60
-text = "PAUSE"
+text = "OPÇÕES"
 horizontal_alignment = 1
 
 [node name="VoltarBtn" type="Button" parent="."]
@@ -86,3 +127,21 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_l6p6e")
 theme_override_styles/hover = SubResource("StyleBoxTexture_gtvgq")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_gtvgq")
 theme_override_styles/normal = SubResource("StyleBoxTexture_x3tcn")
+
+[node name="Sair" type="Sprite2D" parent="."]
+position = Vector2(942, 475)
+scale = Vector2(3.1875, 3.1875)
+texture = ExtResource("5_o04lr")
+
+[node name="Audio" type="Sprite2D" parent="."]
+position = Vector2(648, 476)
+scale = Vector2(3.59375, 3.59375)
+texture = ExtResource("7_0ksy2")
+hframes = 3
+
+[node name="Musica" type="Sprite2D" parent="."]
+position = Vector2(356, 474)
+scale = Vector2(3.66797, 3.66797)
+texture = ExtResource("8_ryga1")
+hframes = 2
+frame = 1

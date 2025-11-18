@@ -34,6 +34,7 @@ corner_radius_bottom_left = 25
 [node name="minigame_agachamento" type="Node2D"]
 script = ExtResource("1_xst05")
 academia = "res://telas/fase_2.tscn"
+total_reps = 1
 
 [node name="tela_carregamento" parent="." instance=ExtResource("2_bjavw")]
 visible = false
@@ -89,5 +90,5 @@ destino = "res://telas/fase_2.tscn"
 
 [node name="Instruções" parent="." instance=ExtResource("7_ls7hn")]
 imagem_path = "res://assets/ui/botoes/button.png"
-texto_instrucao = "Segure ESPACO até atingir o alvo, solte na hora certa"
-tecla = "ESPACO"
+texto_instrucao = "Segure ESPAÇO até atingir o alvo, solte na hora certa"
+tecla = "ESPAÇO"

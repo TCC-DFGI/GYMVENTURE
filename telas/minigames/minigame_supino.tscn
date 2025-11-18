@@ -34,6 +34,7 @@ corner_radius_bottom_left = 25
 [node name="minigame_supino" type="Node2D"]
 script = ExtResource("1_eyw62")
 academia = "res://telas/fase_1.tscn"
+total_reps = 1
 
 [node name="tela_carregamento" parent="." instance=ExtResource("1_lt1ou")]
 visible = false
@@ -78,5 +79,5 @@ destino = "res://telas/fase_1.tscn"
 
 [node name="Instruções" parent="." instance=ExtResource("7_ejep5")]
 imagem_path = "res://assets/ui/botoes/button.png"
-texto_instrucao = "Aperte ESPACO preencher a barra verde"
-tecla = "ESPACO"
+texto_instrucao = "Aperte ESPAÇO preencher a barra verde"
+tecla = "ESPAÇO"

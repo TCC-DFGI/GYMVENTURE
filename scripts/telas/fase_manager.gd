@@ -1,11 +1,12 @@
 extends Node
 
+@onready var dialogo := $Diálogo
 # Caminhos das cenas
 const FASES = {
 	1: "res://telas/fase_1.tscn",
 	2: "res://telas/fase_2.tscn", #fase_2
 	3: "res://telas/fase_3.tscn", 
-	4: "res://telas/menu.tscn" #menu --- depois de zerar tudo, volta pro menu
+	4: "res://telas/créditos.tscn" #menu --- depois de zerar tudo, volta pro menu
 }
 
 # Executa automaticamente ao carregar a fase

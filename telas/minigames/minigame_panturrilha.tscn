@@ -46,6 +46,7 @@ corner_radius_bottom_left = 25
 [node name="minigame_panturrilha" type="Node2D"]
 script = ExtResource("1_gc2pc")
 academia = "res://telas/fase_2.tscn"
+total_reps = 1
 alvo_velocidade_base = 0.3
 
 [node name="tela_carregamento" parent="." instance=ExtResource("1_5dg2v")]
@@ -114,5 +115,5 @@ destino = "res://telas/fase_2.tscn"
 
 [node name="Instruções" parent="." instance=ExtResource("7_voa1y")]
 imagem_path = "res://assets/ui/botoes/button.png"
-texto_instrucao = "Segure ESPACO e mantenha dentro do alvo em movimento"
-tecla = "ESPACO"
+texto_instrucao = "Segure ESPAÇO e mantenha dentro do alvo em movimento"
+tecla = "ESPAÇO"

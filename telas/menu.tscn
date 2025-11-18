@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://q32i7y5bc6ta"]
+[gd_scene load_steps=19 format=3 uid="uid://q32i7y5bc6ta"]
 
 [ext_resource type="Script" uid="uid://b8milbwibw3nc" path="res://scripts/telas/menu.gd" id="1_64dqw"]
 [ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_yoxkw"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://cbm3djj3mh4ru" path="res://assets/logo.png" id="3_4u6ot"]
 [ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="4_bhv1q"]
 [ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="5_4u6ot"]
+[ext_resource type="Texture2D" uid="uid://bm3sri1svg5u0" path="res://assets/ui/botoes/config.png" id="5_dbxib"]
+[ext_resource type="PackedScene" uid="uid://wyml1f7k26fv" path="res://telas/pause.tscn" id="8_j6jlu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4u6ot"]
 texture = ExtResource("1_yoxkw")
@@ -83,6 +85,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_alpjs")
 text = "INICIAR
 "
 
+[node name="Config" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1058, 588)
+scale = Vector2(1.78125, 1.78125)
+texture = ExtResource("5_dbxib")
+
 [node name="ConfigBtn" type="Button" parent="."]
 layout_mode = 0
 offset_left = 879.0
@@ -95,7 +103,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_j6jlu")
 theme_override_styles/hover = SubResource("StyleBoxTexture_hnp31")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_hnp31")
 theme_override_styles/normal = SubResource("StyleBoxTexture_5lbg3")
-text = "CONFIGURACOES
+text = "
 "
 
 [node name="logo" type="Sprite2D" parent="."]
@@ -119,3 +127,6 @@ theme_override_fonts/font = ExtResource("2_64dqw")
 theme_override_font_sizes/font_size = 70
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="Pause" parent="." instance=ExtResource("8_j6jlu")]
+destino = "res://telas/tela_inicial.tscn"

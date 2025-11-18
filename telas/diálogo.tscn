@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc3vu684ivile"]
+[gd_scene load_steps=5 format=3 uid="uid://cc3vu684ivile"]
 
 [ext_resource type="Texture2D" uid="uid://cjqytk5afj25a" path="res://assets/ui/diversos/treinador.png" id="1_bupss"]
 [ext_resource type="Script" uid="uid://dx1ka7odyl8lr" path="res://scripts/telas/diálogo.gd" id="1_cjf0y"]
 [ext_resource type="Texture2D" uid="uid://bcxvjuriow0nc" path="res://assets/ui/diversos/balao-de-fala.png" id="2_rl8b2"]
-[ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="3_h6fga"]
-[ext_resource type="Texture2D" uid="uid://cdvaawcbuvu88" path="res://assets/ui/diversos/seta.png" id="4_cjf0y"]
+[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="4_wy4re"]
 
 [node name="Diálogo" type="CanvasLayer"]
 script = ExtResource("1_cjf0y")
@@ -18,10 +17,10 @@ offset_right = 1424.0
 offset_bottom = 938.0
 
 [node name="Treinador" type="Sprite2D" parent="."]
-position = Vector2(1043, 480)
-scale = Vector2(0.1, 0.1)
+position = Vector2(1068, 451)
+scale = Vector2(11.0336, 11.0336)
 texture = ExtResource("1_bupss")
-hframes = 2
+hframes = 4
 
 [node name="BalaoFala" type="Sprite2D" parent="."]
 position = Vector2(463.5, 384.5)
@@ -34,13 +33,8 @@ offset_top = 182.0
 offset_right = 698.0
 offset_bottom = 523.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_h6fga")
+theme_override_fonts/normal_font = ExtResource("4_wy4re")
 theme_override_font_sizes/normal_font_size = 32
 text = "oi! Eu sou seu treinador, Marcio, seja bem vindo!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Seta" type="Sprite2D" parent="."]
-position = Vector2(678, 569)
-scale = Vector2(3.5, 3.5)
-texture = ExtResource("4_cjf0y")
