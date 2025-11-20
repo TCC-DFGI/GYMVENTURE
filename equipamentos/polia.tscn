@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://nkqwnct02b4x" path="res://assets/ui/efeitos/exclamação.png" id="2_8dim2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cgx5e"]
-size = Vector2(20, 14.875)
+size = Vector2(24, 21.875)
 
 [node name="polia" type="Node2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, -5.4375)
+position = Vector2(0, -1.9375)
 shape = SubResource("RectangleShape2D_cgx5e")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -46,7 +46,7 @@ corner_radius_bottom_left = 25
 [node name="minigame_panturrilha" type="Node2D"]
 script = ExtResource("1_gc2pc")
 academia = "res://telas/fase_2.tscn"
-total_reps = 1
+total_reps = 3
 alvo_velocidade_base = 0.3
 
 [node name="tela_carregamento" parent="." instance=ExtResource("1_5dg2v")]

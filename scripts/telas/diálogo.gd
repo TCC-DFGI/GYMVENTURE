@@ -17,11 +17,11 @@ func iniciar_dialogo(tipo: int):
 	match tipo:
 		1:
 			falas = [
-				"Muito prazer, meu nome é Marcio, seu treinador (APERTE ESPAÇO PARA PROSSEGUIR)",
-				"Aqui está a ficha de treino que montei para você",
-				"Para interagir, pressione (E) ao aparecer uma EXCLAMAÇÃO (!)",
-				"E para abrir as opções, aperte ESC",
-				"Vamos lá pro seu primeiro treino"
+				"Muito prazer, meu nome é Marcio, seu treinador (APERTE ESPAÇO PARA PROSSEGUIR).",
+				"Aqui está a ficha de treino que montei para você.",
+				"Os exercícios estarão marcados pra você com uma EXCLAMAÇÃO (!)",
+				"Para interagir pressione (E) e para abrir as opções, aperte (ESC).",
+				"Vamos lá pro seu primeiro treino!"
 			]
 			frames = [0, 1, 2, 0, 1]  # frames do Treinador correspondentes
 		2:
@@ -34,8 +34,8 @@ func iniciar_dialogo(tipo: int):
 		3:
 			falas = [
 				"Bem vindo de novo campeão!",
-				"Para o último treino da semana, vamos trabalhar o dorsal e bíceps",
-				"Me avisa se tiver dúvida"
+				"Para o último treino da semana, vamos trabalhar o dorsal e bíceps.",
+				"Me avisa se tiver dúvida."
 			]
 			frames = [2, 1, 0]
 		4:
@@ -46,7 +46,7 @@ func iniciar_dialogo(tipo: int):
 			frames = [3, 0]
 		5:
 			falas = [
-				"Parabéns, você concluiu seu treino",
+				"Parabéns, você concluiu seu treino.",
 				"Até semana que vem!!!"
 			]
 			frames = [2, 0]
@@ -71,7 +71,7 @@ func _start_typing_effect(texto: String):
 	while i < chars:
 		fala_label.text += texto[i]
 		i += 1
-		await get_tree().create_timer(0.03).timeout  # velocidade da digitação
+		await get_tree().create_timer(0.05).timeout  # velocidade da digitação
 	await get_tree().create_timer(0.2).timeout
 	escrevendo = false
 

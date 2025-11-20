@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nkqwnct02b4x" path="res://assets/ui/efeitos/exclamação.png" id="2_u8ypg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2jwm"]
-size = Vector2(46, 16)
+size = Vector2(40, 24)
 
 [node name="suporte-agachamento" type="Node2D"]
 

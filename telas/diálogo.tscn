@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cjqytk5afj25a" path="res://assets/ui/diversos/treinador.png" id="1_bupss"]
 [ext_resource type="Script" uid="uid://dx1ka7odyl8lr" path="res://scripts/telas/diálogo.gd" id="1_cjf0y"]
 [ext_resource type="Texture2D" uid="uid://bcxvjuriow0nc" path="res://assets/ui/diversos/balao-de-fala.png" id="2_rl8b2"]
-[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="4_wy4re"]
+[ext_resource type="FontFile" uid="uid://bxeo40x4iy0av" path="res://fontes/ari-w9500-bold.ttf" id="4_h6fga"]
 
 [node name="Diálogo" type="CanvasLayer"]
 script = ExtResource("1_cjf0y")
@@ -33,7 +33,7 @@ offset_top = 182.0
 offset_right = 698.0
 offset_bottom = 523.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_wy4re")
+theme_override_fonts/normal_font = ExtResource("4_h6fga")
 theme_override_font_sizes/normal_font_size = 32
 text = "oi! Eu sou seu treinador, Marcio, seja bem vindo!"
 horizontal_alignment = 1

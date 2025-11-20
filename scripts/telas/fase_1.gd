@@ -14,7 +14,7 @@ func _ready():
 
 	# Só mostra o diálogo se ainda não tiver sido exibido antes
 	if not GameState.dialogo_fase_mostrado:
-		dialogo.iniciar_dialogo(tipo)
+		await dialogo.iniciar_dialogo(tipo)
 		GameState.dialogo_fase_mostrado = true
 	else:
 		# Já foi mostrado — libera o movimento imediatamente

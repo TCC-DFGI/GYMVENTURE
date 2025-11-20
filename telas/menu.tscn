@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://q32i7y5bc6ta"]
+[gd_scene load_steps=20 format=3 uid="uid://q32i7y5bc6ta"]
 
 [ext_resource type="Script" uid="uid://b8milbwibw3nc" path="res://scripts/telas/menu.gd" id="1_64dqw"]
 [ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_yoxkw"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="4_bhv1q"]
 [ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="5_4u6ot"]
 [ext_resource type="Texture2D" uid="uid://bm3sri1svg5u0" path="res://assets/ui/botoes/config.png" id="5_dbxib"]
+[ext_resource type="FontFile" uid="uid://bxeo40x4iy0av" path="res://fontes/ari-w9500-bold.ttf" id="8_7wk7a"]
 [ext_resource type="PackedScene" uid="uid://wyml1f7k26fv" path="res://telas/pause.tscn" id="8_j6jlu"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4u6ot"]
@@ -123,10 +124,11 @@ offset_top = 447.0
 offset_right = 939.0
 offset_bottom = 527.0
 theme_override_colors/font_color = Color(0.764495, 0.0543083, 0.0876316, 1)
-theme_override_fonts/font = ExtResource("2_64dqw")
+theme_override_fonts/font = ExtResource("8_7wk7a")
 theme_override_font_sizes/font_size = 70
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Pause" parent="." instance=ExtResource("8_j6jlu")]
+visible = false
 destino = "res://telas/tela_inicial.tscn"

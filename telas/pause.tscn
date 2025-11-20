@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="1_gtwrp"]
 [ext_resource type="Texture2D" uid="uid://c0yrkkx0me73g" path="res://assets/ui/botoes/botao_voltar.png" id="2_bi8kj"]
 [ext_resource type="Texture2D" uid="uid://g74r2803kaqv" path="res://assets/ui/botoes/botao_ind.png" id="2_l6p6e"]
-[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="2_x5h7t"]
+[ext_resource type="FontFile" uid="uid://bxeo40x4iy0av" path="res://fontes/ari-w9500-bold.ttf" id="3_l6p6e"]
 [ext_resource type="Texture2D" uid="uid://bpivgwohxxhk4" path="res://assets/ui/botoes/sair.png" id="5_o04lr"]
 [ext_resource type="Texture2D" uid="uid://dpun0u4xqeiud" path="res://assets/ui/botoes/audio.png" id="7_0ksy2"]
 [ext_resource type="Texture2D" uid="uid://vdcclvjlb8x4" path="res://assets/ui/botoes/musica.png" id="8_ryga1"]
@@ -19,7 +19,7 @@ border_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bi8kj"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_un83m"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ksy2"]
 texture = ExtResource("2_l6p6e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d673s"]
@@ -76,7 +76,7 @@ offset_top = 409.0
 offset_right = 433.0
 offset_bottom = 559.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_bi8kj")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_un83m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0ksy2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_d673s")
 theme_override_styles/normal = SubResource("StyleBoxTexture_1od4j")
 
@@ -108,8 +108,8 @@ offset_top = 176.0
 offset_right = 1033.0
 offset_bottom = 237.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 41
-theme_override_fonts/font = ExtResource("2_x5h7t")
+theme_override_constants/outline_size = 23
+theme_override_fonts/font = ExtResource("3_l6p6e")
 theme_override_font_sizes/font_size = 60
 text = "OPÇÕES"
 horizontal_alignment = 1

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://nkqwnct02b4x" path="res://assets/ui/efeitos/exclamação.png" id="2_4mysl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x8vli"]
-size = Vector2(18, 18)
+size = Vector2(58, 18)
 
 [node name="polia-dupla" type="Node2D"]
 

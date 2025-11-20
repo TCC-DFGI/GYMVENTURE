@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://drrf5m4mdwg7i"]
+[gd_scene load_steps=21 format=3 uid="uid://drrf5m4mdwg7i"]
 
 [ext_resource type="Texture2D" uid="uid://burseqo854hpf" path="res://assets/background/academia-background.png" id="1_0kixj"]
 [ext_resource type="Script" uid="uid://4x64v0yb3cv1" path="res://scripts/telas/cadastro.gd" id="1_mtrka"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cxw1lfymgf1wq" path="res://scripts/telas/senha_visível.gd" id="4_1ucbg"]
 [ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="5_fi2by"]
 [ext_resource type="Texture2D" uid="uid://c0yrkkx0me73g" path="res://assets/ui/botoes/botao_voltar.png" id="6_1ucbg"]
+[ext_resource type="FontFile" uid="uid://bxeo40x4iy0av" path="res://fontes/ari-w9500-bold.ttf" id="6_n2dqs"]
 [ext_resource type="Texture2D" uid="uid://e14n0yht4mhg" path="res://assets/ui/botoes/olho_aberto.png" id="7_4ti2h"]
 [ext_resource type="PackedScene" uid="uid://clkmuf3bqcjpt" path="res://telas/tela_carregamento.tscn" id="9_7tfdf"]
 
@@ -101,10 +102,8 @@ horizontal_alignment = 1
 [node name="StatusLabel" type="Label" parent="NinePatchRect/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.764495, 0.0543083, 0.0876316, 1)
-theme_override_fonts/font = ExtResource("3_jxwpu")
+theme_override_fonts/font = ExtResource("6_n2dqs")
 theme_override_font_sizes/font_size = 17
-text = "
-"
 horizontal_alignment = 1
 autowrap_mode = 3
 

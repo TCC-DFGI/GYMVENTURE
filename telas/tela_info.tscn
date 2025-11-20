@@ -1,11 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://8fu3x2vlvlt3"]
+[gd_scene load_steps=15 format=3 uid="uid://8fu3x2vlvlt3"]
 
 [ext_resource type="Script" uid="uid://qa6rx7usauw3" path="res://scripts/telas/tela_info.gd" id="1_dfp3t"]
 [ext_resource type="FontFile" uid="uid://0lorj40s1j2h" path="res://fontes/FONT_UI.TTF" id="1_fomyp"]
-[ext_resource type="FontFile" uid="uid://cuum8crlbdh2l" path="res://fontes/LIBRIUM_.ttf" id="2_7bsai"]
+[ext_resource type="FontFile" uid="uid://bn5yyhwyobqde" path="res://fontes/ari-w9500.ttf" id="2_7bsai"]
 [ext_resource type="Texture2D" uid="uid://nimbrl5cby15" path="res://assets/ui/botoes/button.png" id="4_nt4w3"]
 [ext_resource type="Texture2D" uid="uid://c0yrkkx0me73g" path="res://assets/ui/botoes/botao_voltar.png" id="5_6hits"]
 [ext_resource type="Texture2D" uid="uid://5i6ienppr0be" path="res://assets/ui/grupos-musculares/rosca.png" id="5_7bsai"]
+[ext_resource type="FontFile" uid="uid://bxeo40x4iy0av" path="res://fontes/ari-w9500-bold.ttf" id="6_hk2st"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6hits"]
 
@@ -43,7 +44,7 @@ offset_top = 211.0
 offset_right = 1052.0
 offset_bottom = 512.0
 theme_override_fonts/font = ExtResource("2_7bsai")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 19
 text = "Este exercício trabalha principalmente o peitoral maior e o tríceps braquial. Deitado sobre o banco, com os cotovelos a 90° e a barra abaixo da linha dos ombros e os pés no chão para promover mais estabilidade, deve-se retirar a barra do suporte e descê-la devagar em direção ao peitoral, retraindo as escápulas e estabilizando o ombro. Controlando o movimento, deve-se descer a barra o máximo possível, realizando o movimento para colá-la no peito, e retornar à posição original."
 autowrap_mode = 2
 
@@ -78,11 +79,12 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_rwnyn")
 
 [node name="Titulo" type="Label" parent="."]
 offset_left = 566.0
-offset_top = 155.0
+offset_top = 136.0
 offset_right = 1050.0
-offset_bottom = 189.0
-theme_override_fonts/font = ExtResource("1_fomyp")
-theme_override_font_sizes/font_size = 34
+offset_bottom = 195.0
+theme_override_constants/outline_size = 21
+theme_override_fonts/font = ExtResource("6_hk2st")
+theme_override_font_sizes/font_size = 45
 text = "Supino"
 autowrap_mode = 2
 
