@@ -5,6 +5,15 @@ func _ready():
 	$NinePatchRect/VBoxContainer/CadastrarBtn.pressed.connect(_on_cadastrar_pressed)
 	$NinePatchRect/VoltarBtn.pressed.connect(_on_voltar_pressed)
 
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		_on_cadastrar_pressed()
+		var foco = get_viewport().gui_get_focus_owner()
+		if foco is LineEdit:
+			_on_cadastrar_pressed()
+			get_viewport().set_input_as_handled()
+
+
 # Cria e retorna um HTTPRequest já configurado
 func criar_request() -> HTTPRequest:
 	var req = HTTPRequest.new()
@@ -16,6 +25,11 @@ func _on_cadastrar_pressed():
 	var email = $NinePatchRect/VBoxContainer/Email.text.strip_edges()
 	var senha = $NinePatchRect/VBoxContainer/Senha.text.strip_edges()
 	var conf_senha = $NinePatchRect/VBoxContainer/Confirmação_Senha.text.strip_edges()
+	
+	$NinePatchRect/VBoxContainer/Nome.text = ""
+	$NinePatchRect/VBoxContainer/Email.text = ""
+	$NinePatchRect/VBoxContainer/Senha.text = ""
+	$"NinePatchRect/VBoxContainer/Confirmação_Senha".text = ""
 	
 	if nome == "" or email == "" or senha == "" or conf_senha == "":
 		$NinePatchRect/VBoxContainer/StatusLabel.text = "Preencha todos os campos!"
@@ -60,6 +74,8 @@ func _on_cadastrar_pressed():
 		var progresso_ok = await criar_progresso(user_id)
 		if progresso_ok:
 			$NinePatchRect/VBoxContainer/StatusLabel.text = "Cadastro realizado com sucesso!"
+			await get_tree().create_timer(2).timeout
+			get_tree().change_scene_to_file("res://telas/tela_inicial.tscn")
 		else:
 			$NinePatchRect/VBoxContainer/StatusLabel.text = "Cadastro realizado, mas não foi possível criar progresso."
 	else:
