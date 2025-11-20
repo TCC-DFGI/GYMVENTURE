@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2r3vfei4v32e"]
+
+[ext_resource type="Script" uid="uid://hy4k3kpojuof" path="res://music_controller.gd" id="1_ap0km"]
+[ext_resource type="AudioStream" uid="uid://bpclgwpwbfevb" path="res://tcc-musica/musica-menu.mp3" id="2_xc4oa"]
+[ext_resource type="AudioStream" uid="uid://b1x3sgpqeflo3" path="res://tcc-musica/musica-mg(1).mp3" id="3_xc4oa"]
+[ext_resource type="AudioStream" uid="uid://d3v4psbfurt18" path="res://tcc-musica/musica-principal.mp3" id="4_vr8kr"]
+
+[node name="Música" type="Node2D"]
+script = ExtResource("1_ap0km")
+
+[node name="Musica-menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_xc4oa")
+playback_type = 1
+parameters/looping = true
+
+[node name="Musica-mg" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xc4oa")
+playback_type = 1
+parameters/looping = true
+
+[node name="Musica-principal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vr8kr")
+playback_type = 1
+parameters/looping = true

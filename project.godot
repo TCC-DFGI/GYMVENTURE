@@ -19,6 +19,7 @@ config/icon="uid://dpw5gcdto1nuq"
 
 TelaCarregamento="*res://telas/tela_carregamento.tscn"
 GameState="*res://GameState.gd"
+Music="*res://MusicController.tscn"
 
 [display]
 

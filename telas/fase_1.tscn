@@ -509,9 +509,6 @@ position = Vector2(313, 69)
 [node name="catraca" parent="Equipamentos" instance=ExtResource("50_0g6lt")]
 position = Vector2(374, 229)
 
-[node name="tela_carregamento" parent="." instance=ExtResource("43_bhg5a")]
-visible = false
-
 [node name="PainelExercicio" parent="." groups=["painel_info"] instance=ExtResource("45_tfk84")]
 visible = false
 
@@ -522,4 +519,7 @@ script = ExtResource("52_278wy")
 visible = false
 
 [node name="Diálogo" parent="." instance=ExtResource("55_an2sh")]
+visible = false
+
+[node name="tela_carregamento" parent="." instance=ExtResource("43_bhg5a")]
 visible = false

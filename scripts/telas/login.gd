@@ -10,6 +10,14 @@ func _ready():
 	login_btn.pressed.connect(_on_login_pressed)
 	voltar_btn.pressed.connect(_on_voltar_pressed)
 
+func _input(event):
+	if event.is_action_pressed("ui_accept"):
+		_on_login_pressed()
+		var foco = get_viewport().gui_get_focus_owner()
+		if foco is LineEdit:
+			_on_login_pressed()
+			get_viewport().set_input_as_handled()
+
 func _on_login_pressed():
 	var email = email_input.text.strip_edges()
 	var senha = senha_input.text.strip_edges()
