@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://hy4k3kpojuof" path="res://music_controller.gd" id="1_ap0km"]
 [ext_resource type="AudioStream" uid="uid://bpclgwpwbfevb" path="res://tcc-musica/musica-menu.mp3" id="2_xc4oa"]
-[ext_resource type="AudioStream" uid="uid://b1x3sgpqeflo3" path="res://tcc-musica/musica-mg(1).mp3" id="3_xc4oa"]
+[ext_resource type="AudioStream" uid="uid://b1x3sgpqeflo3" path="res://tcc-musica/musica-mg1.mp3" id="3_xc4oa"]
 [ext_resource type="AudioStream" uid="uid://d3v4psbfurt18" path="res://tcc-musica/musica-principal.mp3" id="4_vr8kr"]
 
 [node name="Música" type="Node2D"]

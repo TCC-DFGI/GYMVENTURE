@@ -1,26 +1,36 @@
 extends Node
 
+const _FORCE_EXPORT_1 = preload("res://tcc-musica/musica-menu1.mp3")
+const _FORCE_EXPORT_2 = preload("res://tcc-musica/musica-principal1.mp3")
+const _FORCE_EXPORT_3 = preload("res://tcc-musica/musica-mg1.mp3")
+
 @onready var player: AudioStreamPlayer = AudioStreamPlayer.new()
 var current_music: String = ""
 var last_scene_path: String = ""
 
 var music_map := {
-	"res://telas/tela_inicial.tscn": "res://tcc-musica/musica-menu(1).mp3",
-	"res://telas/cadastro.tscn": "res://tcc-musica/musica-menu(1).mp3",
-	"res://telas/login.tscn": "res://tcc-musica/musica-menu(1).mp3",
-	"res://telas/menu.tscn": "res://tcc-musica/musica-menu(1).mp3",
-	"res://telas/fase_1.tscn": "res://tcc-musica/Musica-principal(1).mp3",
-	"res://telas/minigames/minigame_supino.tscn": "res://tcc-musica/musica-mg(1).mp3",
-	"res://telas/minigames/minigame_triceps.tscn": "res://tcc-musica/musica-mg(1).mp3",
-	"res://telas/fase_2.tscn": "res://tcc-musica/musica-principal(1).mp3",
-	"res://telas/minigames/minigame_agachamento.tscn": "res://tcc-musica/musica-mg(1).mp3",
-	"res://telas/minigames/minigame_panturrilha.tscn": "res://tcc-musica/musica-mg(1).mp3",
-	"res://telas/fase_3.tscn": "res://tcc-musica/musica-principal(1).mp3",
-	"res://telas/minigames/minigame_rosca.tscn": "res://tcc-musica/musica-mg(1).mp3",
-	"res://telas/minigames/minigame_pulley.tscn": "res://tcc-musica/musica-mg(1).mp3"
+	"res://telas/tela_inicial.tscn": "res://tcc-musica/musica-menu1.mp3",
+	"res://telas/cadastro.tscn": "res://tcc-musica/musica-menu1.mp3",
+	"res://telas/login.tscn": "res://tcc-musica/musica-menu1.mp3",
+	"res://telas/menu.tscn": "res://tcc-musica/musica-menu1.mp3",
+
+	"res://telas/fase_1.tscn": "res://tcc-musica/musica-principal1.mp3",
+	"res://telas/minigames/minigame_supino.tscn": "res://tcc-musica/musica-mg1.mp3",
+	"res://telas/minigames/minigame_triceps.tscn": "res://tcc-musica/musica-mg1.mp3",
+
+	"res://telas/fase_2.tscn": "res://tcc-musica/musica-principal1.mp3",
+	"res://telas/minigames/minigame_agachamento.tscn": "res://tcc-musica/musica-mg1.mp3",
+	"res://telas/minigames/minigame_panturrilha.tscn": "res://tcc-musica/musica-mg1.mp3",
+
+	"res://telas/fase_3.tscn": "res://tcc-musica/musica-principal1.mp3",
+	"res://telas/minigames/minigame_rosca.tscn": "res://tcc-musica/musica-mg1.mp3",
+	"res://telas/minigames/minigame_pulley.tscn": "res://tcc-musica/musica-mg1.mp3"
 }
 
+
 func _ready():
+	print("PRINCIPAL existe? ", FileAccess.file_exists("res://tcc-musica/musica-principal1.mp3"))
+	print("MG existe? ", FileAccess.file_exists("res://tcc-musica/musica-mg1.mp3"))
 	add_child(player)
 	player.bus = "Master"
 	player.volume_db = -25
